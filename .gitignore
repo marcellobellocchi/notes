@@ -1,31 +1,3 @@
-# Dependencies
-node_modules/
-
-# Quartz build output
-public/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# Environment files
-.env
-.env.*
-!.env.example
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE / editor files
-.idea/
-.vscode/
-
-# Temporary files
-*.tmp
-*.temp
-
 # Obsidian workspace state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
