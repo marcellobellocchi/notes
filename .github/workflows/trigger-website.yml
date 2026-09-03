@@ -1,0 +1,20 @@
+name: Trigger website deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger website deployment
+        env:
+          GH_TOKEN: ${{ secrets.WEBSITE_DEPLOY_TOKEN }}
+        run: |
+          gh workflow run deploy.yml \
+            --repo marcellobellocchi/marcellobellocchi.github.io \
+            --ref main \
+            -f notes_only=true
