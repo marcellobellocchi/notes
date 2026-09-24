@@ -97,11 +97,12 @@ Gli insiemi $\mathbb{Q}$ e $\mathbb{R}$ sono detti densi, perchè fra due numeri
 
 >[!info] Definizione di densità
 >Per ogni valore a e b appartenente nell'insieme A, se a è minore di b, allora esiste un elemento c appartenente ad A tale che c sia maggiore di a e minore di b
+>
 >$$
-\boxed{
-\forall a,b\in A,\quad
-a<b\Rightarrow\exists c\in A:\ a<c<b
-}
-$$
+>\boxed{
+>\forall a,b\in A,\quad
+>a<b\Rightarrow\exists c\in A:\ a<c<b
+>}
+>$$
 
 Questo viene dimostrando selezionando c tale che esso sia uguale alla semisomma di a e b. in $\mathbb{R}$ e in $\mathbb{Q}$ questo valore esisterà sempre, mentre non sarà cosi in $\mathbb{N}$ o in $\mathbb{Z}$
