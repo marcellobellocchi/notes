@@ -7,4 +7,4 @@ Questi sono gli appunti raccolti durante il mio percorso alla **Sapienza Univers
 ### [[Calculus|Calculus]]
 ### [[Linear algebra| Linear algebra]]
 
-Queste note sono in continua evoluzione e vengono aggiornate man mano che il materiale viene studiato e riorganizzato.
+Per navigare, usa le tre linee in alto a sinistra sul telefono, o l'esploratore a sinistra su tablet e pc
