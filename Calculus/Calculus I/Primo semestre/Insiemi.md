@@ -26,7 +26,7 @@ $$
 \frac{1}{2}​, −\frac{3}{4}, 5, 0, 1,333…
 $$
 
-I numeri reali sono tutti i numeri che possono essere rappresentati sulla retta numerica, e comprenono numeri irrazioniali come $\pi$ e $\sqrt{2}$:
+I numeri reali sono tutti i numeri che possono essere rappresentati sulla retta numerica, e comprendono numeri irrazioniali come $\pi$ e $\sqrt{2}$:
 $$
 \mathbb{R} = \{\,\ldots,-2,-1,0,1,\sqrt{2},2,\pi,4,\ldots\,\}
 $$
@@ -38,7 +38,7 @@ $$
 >* Tra due numeri reali ce ne sono infiniti altri. questa proprietà viene definita densità dei numeri reali, e caratterizza anche l'insieme dei numeri razionali e irrazionali
 >*  $\mathbb{R}$ rispetta l'assioma della [[#Assioma della completezza|completezza]]: su questo espanderemo a seguito della definizione di estremi
 
-rivisiteremo la definizione di completezza dei numeri reali più tardi, dopo la definizione degli estremi di un insieme.
+Rivisiteremo la definizione di completezza dei numeri reali più tardi, dopo la definizione degli estremi di un insieme.
 
 Non tutti gli insiemi consentono tutte le operazioni: l'insieme dei numeri naturali consente solo somma e moltiplicazione, gli interi aggiungono a queste le sottrazioni, e gli altri due consentono tutte e 4 le operazioni basiche:
 $$
@@ -73,7 +73,7 @@ x\leq s & \forall x\in A\\
 \end{cases}
 $$
 
-Allo stesso modo, l'estremo inferiore (o infimo) è definito come il massimo dell'insieme dei numeri minoranti
+Allo stesso modo, l'estremo inferiore (o infimo) è definito come il massimo dell'insieme dei numeri minoranti:
 $$
 i=\inf A
 \iff

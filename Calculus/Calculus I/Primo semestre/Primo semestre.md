@@ -1,5 +1,5 @@
 Raccolta delle informazioni riguardanti l'esame di Analisi I del primo semestre
 
->[!info] Indice
->1.  [[Legenda simboli]]
->2.  [[Insiemi]]
+Ordine di lettura:
+1.  [[Legenda simboli|Legenda simboli (opzionale)]]
+2.  [[Insiemi]]
