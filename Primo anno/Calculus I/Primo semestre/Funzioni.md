@@ -47,13 +47,13 @@ $$
 & \text{nessuna}
 & \mathbb{R}
 & \mathbb{R}
-& \mathbb{R}\quad(a\neq0)
+& \mathbb{R}\quad(a\ne0)
 \\
 \hline
 
 \text{Frazionaria } f(x)=\frac{P(x)}{Q(x)}
-& Q(x)\neq0
-& \{x\in\mathbb{R}:Q(x)\neq0\}
+& Q(x)\ne0
+& \{x\in\mathbb{R}:Q(x)\ne0\}
 & \mathbb{R}
 & \operatorname{Im}(f)
 \\
@@ -84,7 +84,7 @@ $$
 \hline
 
 \text{Esponenziale } f(x)=a^x
-& a>0,\ a\neq1
+& a>0,\ a\ne1
 & \mathbb{R}
 & \mathbb{R}
 & (0,+\infty)
@@ -92,7 +92,7 @@ $$
 \hline
 
 \text{Logaritmica } f(x)=\log_a x
-& a>0,\ a\neq1,\ x>0
+& a>0,\ a\ne1,\ x>0
 & (0,+\infty)
 & \mathbb{R}
 & \mathbb{R}
