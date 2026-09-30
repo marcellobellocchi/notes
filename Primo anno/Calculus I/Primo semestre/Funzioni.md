@@ -115,3 +115,21 @@ Una funzione può essere descritta con diverse caratteristiche e valori particol
 2. **Segno**: la funzione è positiva se $f\left(x\right) \geq 0$, altrimenti è negativa.
 3. **Monotonia**: la funzione è crescente se $x_1<x_2\rightarrow f\left(x_1\right)\leq f\left(x_2\right)$, sarà decrescente se $x_1>x_2\rightarrow f\left(x_1\right)\geq f\left(x_2\right)$
 4. **Simmetria**: una funzione può essere pari se $f\left(-x\right) = f\left(x\right)$, dispari se $f\left(-x\right) = -f\left(x\right)$, ma può anche non essere nessuna delle due. Una funzione pari sarà simmetrics rispetto all'asse y, mentre una dispari è simmetrica rispetto all'origine. Il loro dominio rispecchia questa simmetria.
+
+Le funzioni possono anche essere traslate: una funzione $f\left(x-h\right) + k$, dove $h,k\in\mathbb{R}$, sarà spostata a destra di $h$ e in alto di $k$
+
+##### Funzioni inverse 
+
+Prima di definire le funzioni inverse, dobbiamo conoscere i concetti di iniettività e suriettività. Una funzione si dice **iniettiva** laddove tutti i valori di $x$ danno valori di $y$ diversi; non potrà quindi esistere in una funzione iniettiva due valori come $f\left(3\right) = 7$ e $f\left(5\right) = 7$. Una funzione **suriettiva** è invece una funzione la cui immagine  assume tutti i valori del codominio. Una funzione è **biiettiva** quando rispetta sia la suriettività che la iniettività. Si possono anche selezionare intervalli in cui una funzione è suriettiva, iniettiva o biiettiva.
+
+Le funzioni possono essere invertite solo se esse sono iniettive. Questo per la stessa definizione di una funzione: quello che in una funzione normale è $y$, in una funzione inversa è $x$, questo comporterebbe più $x$ che restituiscono un valore $y$, violando questa regola.
+
+Una funzione inversa restituisce x se l'argomento è la funzione di origine:
+$$
+f^{-1} \left(f\left(x\right)\right) = x
+$$
+questa è chiamata **identità** della funzione.
+
+##### Sequenze numeriche
+
+Mentre le funzioni sono un sottoinsieme di $\mathbb{R}$, le sequenze numeriche invece si estendono solo in $\mathbb{N}$. Questo risulta in un grafico a "punti", invece che la linea continua che le funzioni restituiscono
