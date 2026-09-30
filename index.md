@@ -4,7 +4,7 @@ Questi sono gli appunti raccolti durante il mio percorso alla **Sapienza Univers
 
 ## Materie
 
-### [[Calculus I|Calculus I]] (prof. Ansini)
-### [[Linear algebra| Linear algebra]] (prof. Tschaikowski)
+### [[Calculus I]] (prof. Ansini)
+### [[Linear algebra]] (prof. Tschaikowski)
 
 Per navigare, usa le tre linee in alto a sinistra sul telefono, o l'esploratore a sinistra su tablet e pc
