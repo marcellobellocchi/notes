@@ -36,8 +36,40 @@ $$
 $$
 Ogni numero in sistema esadecimale rappresenta 4 bit binari, occupandoli allo stesso modo in cui un numero decimale li occuperebbe.
 
-[^1]:Il Least Significant bit determina se un numero è pari (se vale 0) o dispari, dato che vale sempre 1 convertito in decimale.
+[^1]:Il Least Significant bit determina se un numero è pari (se vale 0) o dispari, dato che vale $2^0$, ovvero 1.
 
+# Rappresentazione di numeri negativi
+
+I numeri con segno sono detti **signed**, mentre quelli senza segno, discussi fino ad ora, sono detti **unsigned**. Due strategie sono state create nel tempo per confrontare il problema della rappresentazione di numeri *signed*.
+
+La prima strategia è detta *sign/magnitude*. è una strategia meno usata in quanto con questa rappresentazione non è possibile eseguire operazioni. In questa rappresentazione, l'MSB rappresenta il segno, con 0 di significato positivo e 1 negativo. La rappresentazione è denominata in questo modo perchè il primo bitt è detto sign bit, e il resto sono i magnitude bit. Il range di numeri rappresentabili in questa rappresentazione è $[-2^{n-1}+1, 2^{n-1}-1]$ , dove n rappresenta il numero di bit meno uno ( per la cronaca, i numeri signed hanno il range $[0, 2^{n-1}]$ ).
+
+Il secondo metodo, utilizzato nella pratica, è denominato *complemento a due* ( o two's complement ). Anche in questa rappresentazione l'MSB rappresenta il segno, ma i restanti bit non sono semplicemente il numero positivo equivalente. per ottenere da un numero positivo l'equivalente negativo, e viceversa, bisogna usare il valore opposto per ogni bit e aggiungere uno
+$$
+0110\quad\rightarrow\quad1001 + 1 = 1010
+$$
+con questa rappresentazione, si possono eseguire le operazioni. Per questo motivo, è quella utilizzata nella pratica. Il range è $[-2^{n-1},2^{n-1}-1]$, ottenendo anche un numero extra rispetto a sign/magnitude, dato che non ci sono due valori per rappresentare lo stesso numero ( in sign/magnitude, 1000 e 0000 valgono entrambi 0 ). Esiste anche almeno un *weird number* in two's complement: in 4 bit, quel numero è -8. Essendoci sempre un numero negativo in più nel range che numeri positivi, scambiare il segno attraverso il metodo mostrato sopra non restituirà 8, ma sempre -8, dato che 8 non è compreso nel range.
+
+Per ottenere il numero di bit necessari a rappresentare un numero, per i numeri unsigned si usa $\lfloor\log_2\left(A\right)\rfloor+1$, mentre per gli signed si usa $\lfloor\log_2\left(A\right)\rfloor+2$, dove A è il numero da rappresentare. 
+
+Laddove non specificato, nel resto dei file, verrà usato il metodo complemento a due per i numeri signed.
 # Le operazioni
 
-Per operare sistemi digitali, è necessario trovare sistemi per fare operazioni direttamente in codice binario. Questo è molto semplice con numeri interi
+Per operare sistemi digitali, è necessario trovare sistemi per fare operazioni direttamente in codice binario. La somma e differenza in codice binario funzionano allo stesso modo che in base 10, sia per base binaria che base esadecimale. bisogna però essere attenti al rischio di overflow: se un numero di riporto eccede il numero massimo di bit disponibili, viene perso, causando l'operazione in questione a essere scorretta ( esempio con numero unsigned ):
+$$
+1011+0111=0010
+$$
+il problema è che un numero di riporto viene perso, sbagliando quindi l'operazione. Questo vale sia con somme che con differenze. Con i numeri signed con complemento a due, ci sono alcune particolarità. Due numeri di segno opposto non daranno mai overlflow, è finchè nelle somme o differenze di segno opposto il bit del segno non viene cambiato, non esiste overflow.
+
+Esistono anche delle operazioni dette *bit shifts*, e ne esistono di due tipi: aritmetici e logici. A loro volta i bit shift si dividono verso destra e verso sinistra. I logici hanno tutti e due, gli aritmetici solo a destra. Molto semplicemente, spostano i bit o a destra o a sinistra e rimpiazzano i bit persi con uno specifico valore. I logici, marcati col segno >> ( A>>n e A<<n, dove A sono i bit che subiscono lo spostamento e n di quanto deve essere spostato ) rimpiazzano i bit persi con 0, mentre gli aritmetici ( A>>>n ) rimpiazzano i bit persi con il bit i segno.
+$$
+0110<<2\quad\rightarrow\quad1000\quad\quad|\quad\quad1000>>>2\quad\rightarrow\quad1110
+$$
+Il left shift vale come moltiplicazione, in quanto i numeri spostati aumentano di valore, essendo il codice binario un sistema che assegna valore in base alla posizione del numero. Il right shift **aritmetico** invece, vale come divisione, per un motivo analogo al precedente. Questo modo di eseguire divisioni è estremamente efficiente, in contrasto al normale algoritmo di divisione, ma funziona solo per divisioni con divisore pari. Una strategia in sistemi in cui l'efficienza è critica è di cercare di portare il divisore in numero pari proprio per questo motivo.
+Ricorda che il left shift logico non ha questo stesso valore di divisione.
+##### Estensioni
+Laddove si dovesse rivelare necessario avere più bit per rappresentare numeri diversi, si possono estendere usando diverse strategie. Per i numeri unsigned è sufficiente aggiungere 0 a sinistra ( metodo chiamato zero extension ). Altrimenti, si deve aggiungere a sinistra il bit corrispondente al segno del numero:
+$$
+0110\quad\rightarrow\quad000110\quad\quad|\quad\quad
+1011\quad\rightarrow\quad111011
+$$
