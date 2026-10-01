@@ -2,9 +2,10 @@
 
 Questi sono gli appunti raccolti durante il mio percorso alla **Sapienza Università di Roma**, nel corso **Applied Computer Science and Artificial Intelligence**.
 
-## Materie
+## Materie 
 
-### [[Calculus I]] (prof. Ansini)
-### [[Linear algebra]] (prof. Tschaikowski)
+### Calculus I (prof. Ansini)
+### Linear algebra (prof. Tschaikowski)
+### Computer Architecture (prof. De Sensi)
 
 Per navigare, usa le tre linee in alto a sinistra sul telefono, o l'esploratore a sinistra su tablet e pc
