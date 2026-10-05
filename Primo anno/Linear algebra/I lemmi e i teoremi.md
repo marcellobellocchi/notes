@@ -50,7 +50,7 @@ z
 \qquad s,t\in\mathbb{R}
 $$
 
-Questo teorema è descritto da due lemmi.
+Questo teorema è dimostrato da due lemmi.
 
 ##### Lemma 1
 
@@ -150,3 +150,20 @@ Per dimostrare, sappiamo intanto che le tre possibilità enunciate dal corollari
 Prima osserviamo come un sistema omogeneo con almeno una soluzione $\vec{v}$ diversa da $\vec{0}$ ha infinite soluzioni, perchè tutti i multipli scalari di $\vec{v}$ risolvono anche i sistemi omogenei, e ci sono infiniti multipli scalari di $\vec{v}$.
 
 Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è vuoto ( se non ci sono soluzioni particolari $\vec{p}$ ), ha un elemento ( se esiste un $\vec{p}$ e il sistema omogeneo ha unica soluzione $\vec{0}$ ), o è infinito sotto le condizioni evidenziate sopra.
+
+
+# Disuguaglianza triangolare e derivati
+
+>[!info] Enunciato
+>per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$ ,
+>$$
+>\lvert \vec{u} + \vec{v} \rvert \leq \lvert\vec{u}\rvert + \lvert\vec{v}\rvert
+>$$
+>dove i valori sono uguali soltanto se uno dei vettori è un multiplo positivo scalare dell'altro
+
+Dimostriamo sapendo che essendo tutti i numeri positivi, la diseguaglianza è vera solo se anche il suo quadrato è vero: $$
+\lvert\vec{u}+\vec{v}\rvert^2 \leq \left(\lvert\vec{u}+\vec{v}\right)^2
+\rightarrow\vec{u}^2+2\vec{uv}+\vec{v}^2\leq\vec{u}^2+2\lvert\vec{u}\rvert\lvert\vec{v}\rvert+\vec{v}^2\newline\rightarrow2\vec{uv} \leq 2\lvert\vec{u}\rvert\lvert\vec{v}\rvert
+$$
+
+
