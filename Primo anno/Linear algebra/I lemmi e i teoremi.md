@@ -161,9 +161,5 @@ Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è
 >$$
 >dove i valori sono uguali soltanto se uno dei vettori è un multiplo positivo scalare dell'altro
 
-Dimostriamo sapendo che essendo tutti i numeri positivi, la diseguaglianza è vera solo se anche il suo quadrato è vero: $$
-\lvert\vec{u}+\vec{v}\rvert^2 \leq \left(\lvert\vec{u}+\vec{v}\right)^2
-\rightarrow\vec{u}^2+2\vec{uv}+\vec{v}^2\leq\vec{u}^2+2\lvert\vec{u}\rvert\lvert\vec{v}\rvert+\vec{v}^2\newline\rightarrow2\vec{uv} \leq 2\lvert\vec{u}\rvert\lvert\vec{v}\rvert
-$$
-
+Corollario di questo teorema è la disuguaglianza di Cauchy-Schwarz, che enuncia semplicemente che per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$, $\rvert\vec{u}\cdot 
 
