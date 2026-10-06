@@ -53,6 +53,44 @@ con questa rappresentazione, si possono eseguire le operazioni. Per questo motiv
 Per ottenere il numero di bit necessari a rappresentare un numero, per i numeri unsigned si usa $\lfloor\log_2\left(A\right)\rfloor+1$, mentre per gli signed si usa $\lfloor\log_2\left(A\right)\rfloor+2$, dove A è il numero da rappresentare. 
 
 Laddove non specificato, nel resto dei file, verrà usato il metodo complemento a due per i numeri signed.
+
+# Rappresentazione di numeri frazionari
+
+Ovviamente, per le applicazioni pratiche, serve anche una rappresentazione per i numeri frazionari. Esistono diverse rappresentazioni, ma appartengono tutte a due famiglie: **fixed point** e **floating point**.
+
+>[!tip] Differenza
+>I fixed point numer stabiliscono una posizione in cui mettere la virgola che separa i valori interi dai valori decimali. I floating point invece, cambiano questa posizione in base al valore del numero inserito, come vedremo.
+
+Prendendo come esempio una serie signed di bit, con 4 bit che rappresentano la serie decimale e 4 la parte intera, dimostriamo un esempio su come convertire da bit a decimale in un numero fixed point ( In questo caso, si mette -2 invece che due perchè il numero è negativo ):
+$$
+\begin{array}{c c c c c c c c}
+-2^3 & -2^2 & -2^1 & -2^0 & 2^{-1} & 2^{-2} & 2^{-3} & 2^{-4} \\
+\downarrow & \downarrow & \downarrow & \downarrow &
+\downarrow & \downarrow & \downarrow & \downarrow \\
+1 & 1 & 0 & 0 & 1 & 1 & 0 & 0
+\end{array}
+$$
+Per convertire da numero dopo la virgola a rappresentazione in bit, si prende il valore in base decimale e si moltiplica per due. Se il numero è maggiore a 1, il bit corrispondente sarà 1, altrimenti sarà uguale a 0. Poi, si sottrae 1 nel caso il numero fosse stato maggiore a 1, e si procede finchè si arriva a 0. Se non ci sono bit sufficienti alla rappresentazione del numero decimale, i numeri a seguire vengono scartati
+
+Questa è una rappresentazione efficiente dal punto di vista di prestazioni, infatti viene usata nei livelli più bassi di hardware e circuiti, ma non è quella più usata in quanto non è il modo più efficiente di utilizzare i bit per la rappresentazione di numeri decimali.x
+Per questo, nei dispositivi moderni, viene usata la rappresentazione floating point. In particolare, lo standard più utilizzato per questo tipo di rappresentazione è definito nell'IEEE 754.
+Questo standard ( che d'ora in poi sarà quello a cui ci si riferisce automaticamente nel resto delle citazioni dei floating point ) è definito per dimensioni di 16, 32 e 64 bit. Cambiano soltanto i numeri di bit deicati ai rispettivi spazi, ma ci concentreremo sulla definizione per 32 bit.
+
+I floating point sono separati in 3 sezioni. Il segno (1 bit), L'esponente (8 bit nella definizione da 32 bit) e la mantissa (23 bit nella definizione da 32 bit). La forma appare come $\pm M\times2^E$, dove M è la mantissa e E l'esponente.
+Approfondiamo sui singoli gruppi di bit: Il bit del segno, intuitivamente, è uguale a 0 se il numero è positivo e 1 se negativo. L'esponente invece viene memorizzato aggiungendo al vero valore 127. 127, in questa rappresentazione, è detta bias, e l'esponente biase exponent. Questo perchè, in questo modo, non c'è bisogno di un bit dedicato al segno dell'esponente, e il bias è pari a 127 in quanto il massimo numero unsigned rappresentabile con 8 bit è 255.
+Bisogna però prestare attenzione al fatto che i valori 00000000 e 11111111 dell'esponente sono riservati rispettivamente a zero/subnormal e infinito/NaN.
+La mantissa invece va a rappresentare il numero vero e proprio da rappresentare. Nelle rappresentazioni floading point, la virgola si sposta a destra dell'uno con maggior valore, quindi si avrà $0111,1001\times2^0 \rightarrow 1,111001\times2^2$, oppure $0000,0101\times2^0\rightarrow1,01\times2^{-2}$. Dato che il primo bit sarà sempre uno, nelle rappresentazioni viene in realtà troncato. risulterà quindi un numero con forma simile a questa:
+$$
+-58.25_{10}
+\rightarrow
+1.1101001_2\times2^5
+\rightarrow
+\underbrace{1}_{\text{Segno}}\,
+\underbrace{10000100}_{\text{Esponente}}\,
+\underbrace{11010010000000000000000}_{\text{Mantissa}}
+$$
+i bit non usati dal numero rappresentato saranno semplicemente 0 messi a sinistra.
+( Ricorda che, nella rappresentazione l'esponente non è uguale a 5 ma a 127 + 5 )
 # Le operazioni
 
 Per operare sistemi digitali, è necessario trovare sistemi per fare operazioni direttamente in codice binario. La somma e differenza in codice binario funzionano allo stesso modo che in base 10, sia per base binaria che base esadecimale. bisogna però essere attenti al rischio di overflow: se un numero di riporto eccede il numero massimo di bit disponibili, viene perso, causando l'operazione in questione a essere scorretta ( esempio con numero unsigned ):
