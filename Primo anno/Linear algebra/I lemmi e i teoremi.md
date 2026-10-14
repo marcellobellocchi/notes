@@ -163,3 +163,9 @@ Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è
 
 Corollario di questo teorema è la disuguaglianza di Cauchy-Schwarz, che enuncia semplicemente che per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$, $\rvert\vec{u}\cdot\vec{v}\lvert\leq\rvert\vec{u}\lvert\rvert\vec{v}\lvert$.
 
+# Lemma della combinazione lineare
+
+>[!info] Enunciato
+>Ogni operazione elementare sulle righe di una matrice, o di un sistema lineare, produce una riga che è la combinazione lineare delle righe precedenti
+
+Questo lemma è la base delle riduzioni di Gauss e Gauss-Jordan, in cui vengono sottratte, aggiunte, moltiplicate o divise righe in base alle esigenze del problema.

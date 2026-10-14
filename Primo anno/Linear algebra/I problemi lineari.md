@@ -31,7 +31,6 @@ x + 2y - z = 4 \\
 $$
 le variabili non-leading sono dette *free* o variabili libere.
 In questa forma, è sufficiente sostituire la variabile nell'equazione risolta (in questo caso, $z=1$) per risolvere a catena le variabili superiori nel sistema.
-Esiste anche la forma a scala ridotta, ed accade laddove il sistema, oltre che a essere in forma a scala
 
 
 Un sistema può invece essere definito **omogeneo** quando le costanti (i numeri dopo l'uguale) sono uguali a zero.
@@ -76,3 +75,34 @@ $$
 in questo modo, anche i risultati del sistema possono essere rappresentati da una matrice.
 
 Una matrice quadrata è definita regolare se è la matrice dei coefficienti di un sistema omogeneo con unica soluzione (come definito nel [[I lemmi e i teoremi#Corollario|corollario]] del primo teorema analizzato nel documento [[I lemmi e i teoremi]]). Contrariamente, è definito singolare se è la matrice dei coefficienti di un sistema con soluzioni infinite.
+
+Avendo definito le matrici, si può definire anche la forma a scala ridotta: essa è un'estensione della precedente forma a scala, ma in aggiunta, la variabile leading è l'unica nella propria colonna diversa da 0 e le righe alla fine sono nulle. queste due matrici sono quindi in forma a scala ridotta:
+$$
+\begin{array}
+{c@{\qquad\longrightarrow\qquad}l} 
+\begin{bmatrix} 
+1 & 0 & 2 & 3\\
+0 & 1 & -1 & 4\\
+0 & 0 & 0 & 0 
+\end{bmatrix} 
+& 
+\begin{cases} 
+x+2z=3\\ 
+y-z=4\\ 
+0=0 
+\end{cases} \\[1cm] 
+\begin{bmatrix} 
+1 & 0 & 0 & 2 & -1 & 3\\ 
+0 & 1 & 0 & 0 & 4 & -2\\ 
+0 & 0 & 1 & -3 & 0 & 5 
+\end{bmatrix} 
+& 
+\begin{cases} 
+x_1+2x_4-x_5=3\\ 
+x_2+4x_5=-2\\ 
+x_3-3x_4=5 
+\end{cases} 
+\end{array}
+$$
+essenzialmente, per ogni riga, corrisponde una variabile che non si presenta nelle altre righe.
+Se con la riduzione di Gauss ci si ferma alla forma a scala, esiste una variante, denominata riduzione di Gauss-Jordan, che arriva invece fino alla forma a scala ridotta.
