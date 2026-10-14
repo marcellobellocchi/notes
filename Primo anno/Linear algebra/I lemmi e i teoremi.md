@@ -161,5 +161,5 @@ Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è
 >$$
 >dove i valori sono uguali soltanto se uno dei vettori è un multiplo positivo scalare dell'altro
 
-Corollario di questo teorema è la disuguaglianza di Cauchy-Schwarz, che enuncia semplicemente che per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$, $\rvert\vec{u}\cdot 
+Corollario di questo teorema è la disuguaglianza di Cauchy-Schwarz, che enuncia semplicemente che per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$, $\rvert\vec{u}\cdot\vec{v}\lvert\leq\rvert\vec{u}\lvert\rvert\vec{v}\lvert$.
 

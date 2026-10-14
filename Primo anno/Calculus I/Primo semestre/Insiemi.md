@@ -31,7 +31,7 @@ $$
 \mathbb{R} = \{\,\ldots,-2,-1,0,1,\sqrt{2},2,\pi,4,\ldots\,\}
 $$
 
->[!tip] I numeri reali
+>[!tip]+ I numeri reali
 >L'insieme dei numeri reali è particolarmente rilevante anche per le sue proprietà:
 >*  Ad ogni numero reale corrisponde uno e un solo punto sulla retta numerica
 >*  Per ogni coppia di numeri reali, è sempre possibile confrontarli per vedere se uno è maggiore, minore o uguale rispetto all'altro.
