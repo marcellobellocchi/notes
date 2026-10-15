@@ -12,3 +12,6 @@
 >10. Moltiplicare un vettore per lo scalare 1 lo lascia invariato
 
 Tutte queste condizioni, analizzandole sotto la superficie, sono in realtà abbastanza elementari, e già riscontrate per le normali operazioni in $\mathbb{R}$. 
+Uno spazio vettoriale da un elemento è denominato *trivial space*, o banale in italiano, ma non esiste spazio vettoriale senza elementi, in quanto non rispetta alcune delle condizioni (nello specifico, la condizione per cui lo spazio vettoriale deve sempre contenere $\vec{0}$, condizione 4. Da questo segue che lo spazio vettoriale trivial contiene solo $\vec{0}$).
+
+Di uno spazio vettorilale possono esistere anche i sottospazi, che sono sottoinsiemi di altri spazi vettoriali, di cui ereditano le operazioni. Molti spazi vettoriali sono infatti sottospazi di $\mathbb{R}^n$, e ne ereditano le sue operazioni di moltiplicazione e somma. Tutti gli spazi vettoriali hanno il loro sottospazio trivial che contiene solo $\vec{0}$. Un sottospazio che non contiene tutti gli elementi del suo spazio vettoriale maggiore è detto sottospazio proprio, mentre in caso contrario sono definiti impropri.
