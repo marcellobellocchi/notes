@@ -9,4 +9,5 @@ Questi sono gli appunti raccolti durante il mio percorso alla **Sapienza Univers
 Libro: Linear algebra - Jim Hefferon
 ### Computer Architecture (prof. De Sensi)
 
+
 Per navigare, usa le tre linee in alto a sinistra sul telefono, o l'esploratore a sinistra su tablet e pc
