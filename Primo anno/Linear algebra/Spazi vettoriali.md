@@ -31,4 +31,5 @@ Se si calcola lo span di un qualsiasi sottoinsieme si uno spazio vettoriale, ess
 
 ### Indipendenza lineare
 
-In uno spazio vettoriale, un insieme di vettori è linearmente indipendente se nessuno dei suoi elementi è una combinazione lineare degli altri nello spazio vettoriale, altrimenti è linearmente dipendente. 
+In uno spazio vettoriale, un insieme di vettori è linearmente indipendente se nessuno dei suoi elementi è una combinazione lineare degli altri nell'insieme, altrimenti è linearmente dipendente. Due (o più) vettori possono essere in una relazione lineare nel caso siano una combinazione lineare dell'altro.
+Un sottoinsieme di uno spazio vettoriale è linearmente indipendente se e solo se l'unica relazione lineare con il vettore $\vec{0}$ sia quella in cui i coefficienti sono 0. Nel caso in cui questo non fosse vero infatti, ci sarebbero due vettori dal coefficiente opposto che sarebbero in relazione lineare con il vettore $\vec{0}$. È sufficiente verificare questa condizione per il vettore nullo, perchè esso ci permette di verificare se uno dei vettori può essere ricavato da altri attraverso una combinazione lineare. Nelle matrici in forma a scala, sono linearmente indipendenti le righe diverse da 0
