@@ -24,7 +24,7 @@ $$
 1 \div 2  & 0  & 1
 \end{array}
 $$
-una volta ottenuti questi numeri, si posiziona il resto in modo che l'ultimo resto sia in prima posizione, quella più a sinistra ( denominata Most Significant Bit, MSB ), e il primo sia invece nella posizione più a destra ( Least Significant Bit, LSB )[^1]. Si ottiene dunque:
+una volta ottenuti questi numeri, si posiziona il resto in modo che l'ultimo resto sia in prima posizione, quella più a sinistra (denominata Most Significant Bit, MSB), e il primo sia invece nella posizione più a destra (Least Significant Bit, LSB)[^1]. Si ottiene dunque:
 $$
 53_{10}\quad\rightarrow\quad110101_{2}
 $$
@@ -61,7 +61,7 @@ Ovviamente, per le applicazioni pratiche, serve anche una rappresentazione per i
 >[!tip] Differenza
 >I fixed point numer stabiliscono una posizione in cui mettere la virgola che separa i valori interi dai valori decimali. I floating point invece, cambiano questa posizione in base al valore del numero inserito, come vedremo.
 
-Prendendo come esempio una serie signed di bit, con 4 bit che rappresentano la serie decimale e 4 la parte intera, dimostriamo un esempio su come convertire da bit a decimale in un numero fixed point ( In questo caso, si mette -2 invece che due perchè il numero è negativo ):
+Prendendo come esempio una serie signed di bit, con 4 bit che rappresentano la serie decimale e 4 la parte intera, dimostriamo un esempio su come convertire da bit a decimale in un numero fixed point (In questo caso, si mette -2 invece che due perchè il numero è negativo):
 $$
 \begin{array}{c c c c c c c c}
 -2^3 & -2^2 & -2^1 & -2^0 & 2^{-1} & 2^{-2} & 2^{-3} & 2^{-4} \\
@@ -72,9 +72,9 @@ $$
 $$
 Per convertire da numero dopo la virgola a rappresentazione in bit, si prende il valore in base decimale e si moltiplica per due. Se il numero è maggiore a 1, il bit corrispondente sarà 1, altrimenti sarà uguale a 0. Poi, si sottrae 1 nel caso il numero fosse stato maggiore a 1, e si procede finchè si arriva a 0. Se non ci sono bit sufficienti alla rappresentazione del numero decimale, i numeri a seguire vengono scartati
 
-Questa è una rappresentazione efficiente dal punto di vista di prestazioni, infatti viene usata nei livelli più bassi di hardware e circuiti, ma non è quella più usata in quanto non è il modo più efficiente di utilizzare i bit per la rappresentazione di numeri decimali.x
+Questa è una rappresentazione efficiente dal punto di vista di prestazioni, infatti viene usata nei livelli più bassi di hardware e circuiti, ma non è quella più usata in quanto non è il modo più efficiente di utilizzare i bit per la rappresentazione di numeri decimali.
 Per questo, nei dispositivi moderni, viene usata la rappresentazione floating point. In particolare, lo standard più utilizzato per questo tipo di rappresentazione è definito nell'IEEE 754.
-Questo standard ( che d'ora in poi sarà quello a cui ci si riferisce automaticamente nel resto delle citazioni dei floating point ) è definito per dimensioni di 16, 32 e 64 bit. Cambiano soltanto i numeri di bit deicati ai rispettivi spazi, ma ci concentreremo sulla definizione per 32 bit.
+Questo standard (che d'ora in poi sarà quello a cui ci si riferisce automaticamente nel resto delle citazioni dei floating point) è definito per dimensioni di 16, 32 e 64 bit. Cambiano soltanto i numeri di bit deicati ai rispettivi spazi, ma ci concentreremo sulla definizione per 32 bit.
 
 I floating point sono separati in 3 sezioni. Il segno (1 bit), L'esponente (8 bit nella definizione da 32 bit) e la mantissa (23 bit nella definizione da 32 bit). La forma appare come $\pm M\times2^E$, dove M è la mantissa e E l'esponente.
 Approfondiamo sui singoli gruppi di bit: Il bit del segno, intuitivamente, è uguale a 0 se il numero è positivo e 1 se negativo. L'esponente invece viene memorizzato aggiungendo al vero valore 127. 127, in questa rappresentazione, è detta bias, e l'esponente biase exponent. Questo perchè, in questo modo, non c'è bisogno di un bit dedicato al segno dell'esponente, e il bias è pari a 127 in quanto il massimo numero unsigned rappresentabile con 8 bit è 255.
@@ -90,23 +90,23 @@ $$
 \underbrace{11010010000000000000000}_{\text{Mantissa}}
 $$
 i bit non usati dal numero rappresentato saranno semplicemente 0 messi a sinistra.
-( Ricorda che, nella rappresentazione l'esponente non è uguale a 5 ma a 127 + 5 )
+(Ricorda che, nella rappresentazione l'esponente non è uguale a 5 ma a 127 + 5)
 # Le operazioni
 
-Per operare sistemi digitali, è necessario trovare sistemi per fare operazioni direttamente in codice binario. La somma e differenza in codice binario funzionano allo stesso modo che in base 10, sia per base binaria che base esadecimale. bisogna però essere attenti al rischio di overflow: se un numero di riporto eccede il numero massimo di bit disponibili, viene perso, causando l'operazione in questione a essere scorretta ( esempio con numero unsigned ):
+Per operare sistemi digitali, è necessario trovare sistemi per fare operazioni direttamente in codice binario. La somma e differenza in codice binario funzionano allo stesso modo che in base 10, sia per base binaria che base esadecimale. bisogna però essere attenti al rischio di overflow: se un numero di riporto eccede il numero massimo di bit disponibili, viene perso, causando l'operazione in questione a essere scorretta (esempio con numero unsigned):
 $$
 1011+0111=0010
 $$
 il problema è che un numero di riporto viene perso, sbagliando quindi l'operazione. Questo vale sia con somme che con differenze. Con i numeri signed con complemento a due, ci sono alcune particolarità. Due numeri di segno opposto non daranno mai overlflow, è finchè nelle somme o differenze di segno opposto il bit del segno non viene cambiato, non esiste overflow.
 
-Esistono anche delle operazioni dette *bit shifts*, e ne esistono di due tipi: aritmetici e logici. A loro volta i bit shift si dividono verso destra e verso sinistra. I logici hanno tutti e due, gli aritmetici solo a destra. Molto semplicemente, spostano i bit o a destra o a sinistra e rimpiazzano i bit persi con uno specifico valore. I logici, marcati col segno >> ( A>>n e A<<n, dove A sono i bit che subiscono lo spostamento e n di quanto deve essere spostato ) rimpiazzano i bit persi con 0, mentre gli aritmetici ( A>>>n ) rimpiazzano i bit persi con il bit i segno.
+Esistono anche delle operazioni dette *bit shifts*, e ne esistono di due tipi: aritmetici e logici. A loro volta i bit shift si dividono verso destra e verso sinistra. I logici hanno tutti e due, gli aritmetici solo a destra. Molto semplicemente, spostano i bit o a destra o a sinistra e rimpiazzano i bit persi con uno specifico valore. I logici, marcati col segno >> (A>>n e A<<n, dove A sono i bit che subiscono lo spostamento e n di quanto deve essere spostato) rimpiazzano i bit persi con 0, mentre gli aritmetici (A>>>n) rimpiazzano i bit persi con il bit i segno.
 $$
 0110<<2\quad\rightarrow\quad1000\quad\quad|\quad\quad1000>>>2\quad\rightarrow\quad1110
 $$
 Il left shift vale come moltiplicazione, in quanto i numeri spostati aumentano di valore, essendo il codice binario un sistema che assegna valore in base alla posizione del numero. Il right shift **aritmetico** invece, vale come divisione, per un motivo analogo al precedente. Questo modo di eseguire divisioni è estremamente efficiente, in contrasto al normale algoritmo di divisione, ma funziona solo per divisioni con divisore pari. Una strategia in sistemi in cui l'efficienza è critica è di cercare di portare il divisore in numero pari proprio per questo motivo.
 Ricorda che il left shift logico non ha questo stesso valore di divisione.
 ##### Estensioni
-Laddove si dovesse rivelare necessario avere più bit per rappresentare numeri diversi, si possono estendere usando diverse strategie. Per i numeri unsigned è sufficiente aggiungere 0 a sinistra ( metodo chiamato zero extension ). Altrimenti, si deve aggiungere a sinistra il bit corrispondente al segno del numero:
+Laddove si dovesse rivelare necessario avere più bit per rappresentare numeri diversi, si possono estendere usando diverse strategie. Per i numeri unsigned è sufficiente aggiungere 0 a sinistra (metodo chiamato zero extension). Altrimenti, si deve aggiungere a sinistra il bit corrispondente al segno del numero:
 $$
 0110\quad\rightarrow\quad000110\quad\quad|\quad\quad
 1011\quad\rightarrow\quad111011

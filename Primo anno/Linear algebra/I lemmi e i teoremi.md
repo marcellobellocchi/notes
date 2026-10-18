@@ -149,7 +149,7 @@ Per dimostrare, sappiamo intanto che le tre possibilità enunciate dal corollari
 
 Prima osserviamo come un sistema omogeneo con almeno una soluzione $\vec{v}$ diversa da $\vec{0}$ ha infinite soluzioni, perchè tutti i multipli scalari di $\vec{v}$ risolvono anche i sistemi omogenei, e ci sono infiniti multipli scalari di $\vec{v}$.
 
-Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è vuoto ( se non ci sono soluzioni particolari $\vec{p}$ ), ha un elemento ( se esiste un $\vec{p}$ e il sistema omogeneo ha unica soluzione $\vec{0}$ ), o è infinito sotto le condizioni evidenziate sopra.
+Applichiamo quindi il secondo lemma per concludere che l'insieme di soluzione è vuoto (se non ci sono soluzioni particolari $\vec{p}$), ha un elemento (se esiste un $\vec{p}$ e il sistema omogeneo ha unica soluzione $\vec{0}$), o è infinito sotto le condizioni evidenziate sopra.
 
 
 # Disuguaglianza triangolare e derivati

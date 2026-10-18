@@ -1,5 +1,5 @@
 >[!info]+ Definizione
->Uno spazio vettoriale ( su $\mathbb{R}$ ) è un insieme di vettori che possono essere sommati fra loro e moltiplicati per scalari, rispettando queste condizioni:
+>Uno spazio vettoriale (su $\mathbb{R}$) è un insieme di vettori che possono essere sommati fra loro e moltiplicati per scalari, rispettando queste condizioni:
 >1. La somma di due vettori appartenenti allo spazio vettoriale appartiene ancora allo stesso spazio vettoriale
 >2. Cambiando l'ordine della somma di vettori, il risultato non cambia
 >3. Quando si sommano più vettori, il moo in cui essi vengono sommati non cambia il risultato
@@ -15,3 +15,15 @@ Tutte queste condizioni, analizzandole sotto la superficie, sono in realtà abba
 Uno spazio vettoriale da un elemento è denominato *trivial space*, o banale in italiano, ma non esiste spazio vettoriale senza elementi, in quanto non rispetta alcune delle condizioni (nello specifico, la condizione per cui lo spazio vettoriale deve sempre contenere $\vec{0}$, condizione 4. Da questo segue che lo spazio vettoriale trivial contiene solo $\vec{0}$).
 
 Di uno spazio vettorilale possono esistere anche i sottospazi, che sono sottoinsiemi di altri spazi vettoriali, di cui ereditano le operazioni. Molti spazi vettoriali sono infatti sottospazi di $\mathbb{R}^n$, e ne ereditano le sue operazioni di moltiplicazione e somma. Tutti gli spazi vettoriali hanno il loro sottospazio trivial che contiene solo $\vec{0}$. Un sottospazio che non contiene tutti gli elementi del suo spazio vettoriale maggiore è detto sottospazio proprio, mentre in caso contrario sono definiti impropri.
+
+Uno spazio generato (o span) è l'insieme di tutte le possibili combinazioni lineari dei vettori in uno spazio vettoriale. Dati i vettori $v_1, v_2, \cdots, v_n$, il loro span si definisce come:
+$$
+\operatorname{span}(v_1,\ldots,v_n)
+=
+\left\{
+\sum_{i=1}^n\lambda_i v_i
+\;\middle|\;
+\lambda_i\in\mathbb{R}
+\right\}
+$$
+dove $\lambda_1,\cdots,\lambda_n$ sono scalari reali. In altre parole, moltiplichiamo ciascun vettore per uno scalare e sommiamo i risultati.

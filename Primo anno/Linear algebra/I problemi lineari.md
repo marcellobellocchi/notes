@@ -5,7 +5,7 @@ Data questa definizione, sono diversi i metodi di risoluzione dei problemi linea
 
 ## I sistemi lineari
 
-Un sistema lineare ha la forma $a_1x_1 + a_2x_2 + a_3x_3 + \cdots + a_nx_n$ dove i numeri $a_1, \cdots, a_n \in \mathbb{R}$ sono detti i coefficienti della combinazione. Se in un equazione, il termine numerale ( a destra dell'uguale ) è detto costante. Una n-tupla $\left(s_1, s_2, \cdots, s_n\right) \in \mathbb{R}^n$ è una soluzione, o soddisfa, un equazione laddove la sostituzione degli elementi della tupla con la variabile restituisce una proposizione vera. Un sistema di equazioni lineari ha le soluzioni $\left(s_1,s_2,\cdots,s_n\right)$ se quella n-tupla è una soluzione per tutte le equazioni.
+Un sistema lineare ha la forma $a_1x_1 + a_2x_2 + a_3x_3 + \cdots + a_nx_n$ dove i numeri $a_1, \cdots, a_n \in \mathbb{R}$ sono detti i coefficienti della combinazione. Se in un equazione, il termine numerale (a destra dell'uguale) è detto costante. Una n-tupla $\left(s_1, s_2, \cdots, s_n\right) \in \mathbb{R}^n$ è una soluzione, o soddisfa, un equazione laddove la sostituzione degli elementi della tupla con la variabile restituisce una proposizione vera. Un sistema di equazioni lineari ha le soluzioni $\left(s_1,s_2,\cdots,s_n\right)$ se quella n-tupla è una soluzione per tutte le equazioni.
 
 Per risolvere questo tipo di sistemi, si usa comunemente il metodo di gauss per la riduzione gaussiana. Esso procede con sostituzioni, eliminazioni e altri strumenti per arrivare al risultato finale. Tale risultato non deve però essere cambiato dai procedimenti svolti. Con questa limitazione, sono quindi consentite tre operazioni, dette *operazioni gaussiane*:
 

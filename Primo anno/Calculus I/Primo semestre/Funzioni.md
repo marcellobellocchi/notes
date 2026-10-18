@@ -5,7 +5,7 @@ Si scrive, ad esempio
 $$
 f: A \rightarrow B
 $$
-dove **A** è il dominio ( il nome dell'insieme di partenza ) e **B** è il codominio ( o il nome dell'insieme di arrivo ). $f\left(x\right)$ è il valore che la funzione associa a x. A ogni numero x corrisponde uno e un solo risultato, ad esempio $f\left(3\right) = 7$. Esistono funzioni che violano quest'ultima proprietà, denominate multivoche, che però non sono discusse in questo corso.
+dove **A** è il dominio (il nome dell'insieme di partenza ) e **B** è il codominio ( o il nome dell'insieme di arrivo). $f\left(x\right)$ è il valore che la funzione associa a x. A ogni numero x corrisponde uno e un solo risultato, ad esempio $f\left(3\right) = 7$. Esistono funzioni che violano quest'ultima proprietà, denominate multivoche, che però non sono discusse in questo corso.
 
 Essendo una relazione fra insiemi, il dominio e il codominio presentano estremi. Questi dipendono dalle caratteristiche della funzione e dai valori che la funzione può assumere. L'immagine di una funzione sono invece i valori che la funzione raggiunge effettivamente nel codominio. Alcuni esempi di funzioni e i loro insiemi.
 $$
