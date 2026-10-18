@@ -27,4 +27,8 @@ $$
 \right\}
 $$
 dove $\lambda_1,\cdots,\lambda_n$ sono scalari reali. In altre parole, moltiplichiamo ciascun vettore per uno scalare e sommiamo i risultati.
-Se si calcola lo span di un qualsiasi sottoinsieme si uno spazio vettoriale, esso è un sottospazio dell'originale spazio vettoriale. Questo perchè calcolando soltanto le possibili combinazioni vettoriali si eliminano i componenti che violano le regole che non consentono al sottoinsieme di essere un sotospazio 
+Se si calcola lo span di un qualsiasi sottoinsieme si uno spazio vettoriale, esso è un sottospazio dell'originale spazio vettoriale. Questo perchè calcolando soltanto le possibili combinazioni vettoriali si eliminano i componenti che violano le regole che non consentono al sottoinsieme di essere un sottospazio.
+
+### Indipendenza lineare
+
+In uno spazio vettoriale, un insieme di vettori è linearmente indipendente se nessuno dei suoi elementi è una combinazione lineare degli altri nello spazio vettoriale, altrimenti è linearmente dipendente. 
