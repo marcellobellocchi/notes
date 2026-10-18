@@ -16,7 +16,7 @@ Uno spazio vettoriale da un elemento è denominato *trivial space*, o banale in 
 
 Di uno spazio vettorilale possono esistere anche i sottospazi, che sono sottoinsiemi di altri spazi vettoriali, di cui ereditano le operazioni. Molti spazi vettoriali sono infatti sottospazi di $\mathbb{R}^n$, e ne ereditano le sue operazioni di moltiplicazione e somma. Tutti gli spazi vettoriali hanno il loro sottospazio trivial che contiene solo $\vec{0}$. Un sottospazio che non contiene tutti gli elementi del suo spazio vettoriale maggiore è detto sottospazio proprio, mentre in caso contrario sono definiti impropri.
 
-Uno spazio generato (o span) è l'insieme di tutte le possibili combinazioni lineari dei vettori in uno spazio vettoriale. Dati i vettori $v_1, v_2, \cdots, v_n$, il loro span si definisce come:
+Uno spazio generato (o *span*) è l'insieme di tutte le possibili combinazioni lineari dei vettori in uno spazio vettoriale. Dati i vettori $v_1, v_2, \cdots, v_n$, il loro span si definisce come:
 $$
 \operatorname{span}(v_1,\ldots,v_n)
 =
@@ -27,3 +27,4 @@ $$
 \right\}
 $$
 dove $\lambda_1,\cdots,\lambda_n$ sono scalari reali. In altre parole, moltiplichiamo ciascun vettore per uno scalare e sommiamo i risultati.
+Se si calcola lo span di un qualsiasi sottoinsieme si uno spazio vettoriale, esso è un sottospazio dell'originale spazio vettoriale. Questo perchè calcolando soltanto le possibili combinazioni vettoriali si eliminano i componenti che violano le regole che non consentono al sottoinsieme di essere un sotospazio 
