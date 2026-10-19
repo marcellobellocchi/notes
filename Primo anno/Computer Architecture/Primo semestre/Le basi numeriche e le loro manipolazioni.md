@@ -2,7 +2,7 @@
 
 Sin dall'inizio, ci si è resi conto che l'utilizzo del sistema decimale in dispositivi elettronici era impraticabile: si è quindi reso necessario l'uso di un sistema alternativo. La scelta è quindi caduta sul sistema binario.
 
->[!tip] Il sistema binario
+>[!tip]+ Il sistema binario
 >Il sistema binario è una base che permette l'utilizzo di due valori: 0 e 1.
 >Questi numeri rappresentano l'assenza (0) o la presenza (1) di voltaggio in un transistor, che viene aperto o chiuso in base a questi valori.
 >
@@ -58,7 +58,7 @@ Laddove non specificato, nel resto dei file, verrà usato il metodo complemento 
 
 Ovviamente, per le applicazioni pratiche, serve anche una rappresentazione per i numeri frazionari. Esistono diverse rappresentazioni, ma appartengono tutte a due famiglie: **fixed point** e **floating point**.
 
->[!tip] Differenza
+>[!tip]+ Differenza
 >I fixed point numer stabiliscono una posizione in cui mettere la virgola che separa i valori interi dai valori decimali. I floating point invece, cambiano questa posizione in base al valore del numero inserito, come vedremo.
 
 Prendendo come esempio una serie signed di bit, con 4 bit che rappresentano la serie decimale e 4 la parte intera, dimostriamo un esempio su come convertire da bit a decimale in un numero fixed point (In questo caso, si mette -2 invece che due perchè il numero è negativo):

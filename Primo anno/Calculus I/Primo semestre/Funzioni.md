@@ -1,4 +1,4 @@
->[!info] Definizione
+>[!info]+ Definizione
 >Una funzione matematica è una relazione che associa a ogni elemento di un insieme di partenza uno e un solo elemento di un insieme di arrivo.
 
 Si scrive, ad esempio

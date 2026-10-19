@@ -37,7 +37,7 @@ Un sistema può invece essere definito **omogeneo** quando le costanti (i numeri
 
 ## Matrici e vettori
 
->[!tip] Definizione
+>[!tip]+ Definizione
 >Una matrice m * n è una tabella rettangolare di numeri con m righe e n colonne. Ogni numero nella matrice è denominato **elemento**
 
 Una matrice appare con la seguente forma generica:
@@ -54,7 +54,7 @@ dole la riga e la colonna appaiono al pedice dell'elemento separati da una virgo
 
 Un vettore è semplicemente una matrice con una singola riga o una singola colonna. I suoi elementi sono denominati **componenti**. Un vettore i cui componenti sono tutti uguali a zero è denominato vettore zero. I vettori possono essere identificati con una freccia sopra la lettera che li rappresenta.
 
-Le matrici possono essere sfruttate in diversi modi. uno fra questi è una rappresentazione più efficiente di sistemi lineari.
+Le matrici possono essere sfruttate in diversi modi. Uno fra questi è una rappresentazione più efficiente di sistemi lineari.
 
 Esempio:
 $$
@@ -74,9 +74,9 @@ x - 2y + 3z = 1 \\
 $$
 in questo modo, anche i risultati del sistema possono essere rappresentati da una matrice.
 
-Una matrice quadrata è definita regolare se è la matrice dei coefficienti di un sistema omogeneo con unica soluzione (come definito nel [[I lemmi e i teoremi#Corollario|corollario]] del primo teorema analizzato nel documento [[I lemmi e i teoremi]]). Contrariamente, è definito singolare se è la matrice dei coefficienti di un sistema con soluzioni infinite.
+Una matrice quadrata è definita regolare se è la matrice dei coefficienti di un sistema omogeneo con unica soluzione. Contrariamente, è definito singolare se è la matrice dei coefficienti di un sistema con soluzioni infinite.
 
-Avendo definito le matrici, si può definire anche la forma a scala ridotta: essa è un'estensione della precedente forma a scala, ma in aggiunta, la variabile leading è l'unica nella propria colonna diversa da 0 e le righe alla fine sono nulle. queste due matrici sono quindi in forma a scala ridotta:
+Avendo definito le matrici, si può definire anche la forma a scala ridotta: essa è un'estensione della precedente forma a scala, ma in aggiunta, la variabile leading è l'unica nella propria colonna diversa da 0 e le righe alla fine sono nulle. Queste due matrici sono quindi in forma a scala ridotta:
 $$
 \begin{array}
 {c@{\qquad\longrightarrow\qquad}l} 
@@ -106,3 +106,66 @@ x_3-3x_4=5
 $$
 essenzialmente, per ogni riga, corrisponde una variabile che non si presenta nelle altre righe.
 Se con la riduzione di Gauss ci si ferma alla forma a scala, esiste una variante, denominata riduzione di Gauss-Jordan, che arriva invece fino alla forma a scala ridotta.
+
+## Teorema della struttura dell'insieme delle soluzioni di un sistema lineare
+
+>[!info]+ Enunciato
+>Ogni sistema lineare ha la forma
+>$$
+>\left\{\vec{p} + c_1\vec{b}_1 + \cdots + c_k\vec{b}_k \mid c_1,\ldots,c_k \in
+>\mathbb{R}\right\}
+>$$
+>dove $\vec{p}$ è una qualsiali soluzione particolare e dove il numero di vettori $\vec{b}_1,\cdots,\vec{b}_k$ è uguale al numero di variabili libere che il sistema ha dopo una riduzione gaussiana
+
+Ricordiamo che le variabili libere sono quelle variabili che, dopo una riduzione gaussiana, non hanno una propria colonna nel sistema. Un esempio di soluzioni di sistemi, e il significato del teorema:
+$$
+\begin{cases}
+x+y+z=3
+\end{cases}
+\qquad\Longrightarrow\qquad
+\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}
+=
+\underbrace{
+\begin{pmatrix}
+3\\
+0\\
+0
+\end{pmatrix}
+}_{\vec p}
++
+\underbrace{s}_{c_1}
+\underbrace{
+\begin{pmatrix}
+-1\\
+1\\
+0
+\end{pmatrix}
+}_{\vec b_1}
++
+\underbrace{t}_{c_2}
+\underbrace{
+\begin{pmatrix}
+-1\\
+0\\
+1
+\end{pmatrix}
+}_{\vec b_2},
+\qquad s,t\in\mathbb{R}
+$$
+
+Corollario del teorema è che gli insiemi delle soluzioni di un sistema sono vuoti, hanno un elemento o ne hanno infiniti.
+
+# Disuguaglianza triangolare e derivati
+
+>[!info]+ Enunciato
+>per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$ ,
+>$$
+>\lvert \vec{u} + \vec{v} \rvert \leq \lvert\vec{u}\rvert + \lvert\vec{v}\rvert
+>$$
+>dove i valori sono uguali soltanto se uno dei vettori è un multiplo positivo scalare dell'altro
+
+Corollario di questo teorema è la disuguaglianza di Cauchy-Schwarz, che enuncia semplicemente che per ogni $\vec{u}, \vec{v} \in \mathbb{R}^n$, $\rvert\vec{u}\cdot\vec{v}\lvert\leq\rvert\vec{u}\lvert\rvert\vec{v}\lvert$.

@@ -1,6 +1,6 @@
 ## Gli insiemi e gli insiemi numerici
 
->[!info] Definizione
+>[!info]+ Definizione
 >Un insieme in matematica è un raggruppamento di elementi di qualsiasi tipo che soddisfa due caratteristiche:
 >1.  è possibile stabilire con assoluta certezza se un elemento appartiene all'insieme
 >2.  gli elementi dell'insieme sono tutti diversi fra loro
@@ -95,7 +95,7 @@ Essendo un assioma, non ha una dimostrazione. Essenzialmente, questa proprietà 
 ##### Densità
 Gli insiemi $\mathbb{Q}$ e $\mathbb{R}$ sono detti densi, perchè fra due numeri razionali o reali (anche fra numeri irrazionali) esiste un numero infinito di valori che li separa.
 
->[!info] Definizione di densità
+>[!info]+ Definizione di densità
 >Per ogni valore a e b appartenente nell'insieme A, se a è minore di b, allora esiste un elemento c appartenente ad A tale che c sia maggiore di a e minore di b
 >
 >$$
