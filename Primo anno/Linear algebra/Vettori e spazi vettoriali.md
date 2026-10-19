@@ -61,7 +61,7 @@ Due (o più) vettori possono essere in una relazione lineare nel caso siano una 
 Un sottoinsieme di uno spazio vettoriale è linearmente indipendente se e solo se l'unica relazione lineare con il vettore $\vec{0}$ sia quella in cui i coefficienti sono 0. Nel caso in cui questo non fosse vero infatti, ci sarebbero due vettori dal coefficiente opposto che sarebbero in relazione lineare con il vettore $\vec{0}$. È sufficiente verificare questa condizione per il vettore nullo, perchè esso ci permette di verificare se uno dei vettori può essere ricavato da altri attraverso una combinazione lineare. 
 Nelle matrici in forma a scala, sono linearmente indipendenti le righe diverse da 0. In uno spazio vettoriale composto da 3 vettori, un modo semplice per vedere se lo spazio è linearmente indipendente è se il terzo vettore è due volte il primo più il secondo.
 
-# Teorema sullo spazio generato
+# Teoremi sullo spazio generato
 
 >[!info]+ Definizione
 >Dove V è uno spazio vettoriale, S è un sottoinsieme dello spazio, e $\vec{v}$ è un elemento dello spazio, $[S \cup \{\vec{v}\}] = [S] \iff \vec{v} \in [S]$
@@ -69,3 +69,11 @@ Nelle matrici in forma a scala, sono linearmente indipendenti le righe diverse d
 Quindi, aggiungere un vettore a un insieme non cambia lo spazio generato se e solo se quel vettore appartiene già allo spazio generato dall'insieme.
 In un insieme linearmente indipendente, la sola aggiunta di un vettore non lo rende linearmente dipendente: ciò invece dipende dal contenuto del vettore, e se altera le condizioni nella proprietà fondamentale dell'indipendenza lineare.
 A causa di questo teorema, segue che l'eliminazione di un vettore $\vec{v}$ a uno span S non riduce S se e solo se $\vec{v}$ è in relazione lineare con altri vettori in S. Pertanto, S è linearmente indipendente se la rimozione di qualsiasi suo vettore riduce S.
+In uno spazio vettoriale, ogni insieme finito di vettori contiene quindi un sottoinsieme linearmente indipendente che genera la stessa span. Questo succede perché la span descrive le combinazioni lineari possibili in un insieme, e quindi è sufficiente selezionare quei vettori che possono generare le combinazioni lineari possibili.
+Un sottoinsieme di un insieme linearmente indipendente è linearmente indipendente, mentre un superinsieme di un insieme linearmente dipendente è anche esso linearmente dipendente.
+
+
+>[!info]+ Definizione
+>Un insieme $S=\{\vec{s}_1,\cdots,\vec{s}_n\}$ è linearmente dipendente se e solo se almeno un vettore $\vec{s}_i$ è una combinazione lineare dei vettori che lo precedono, ovvero $\vec{s}_1,\cdots,\vec{s}_{i-1}$
+
+Prendiamo come esempio $\vec{a}=\begin{pmatrix}1 \\ 0 \end{pmatrix}, \vec{b}=\begin{pmatrix}0 \\ 1 \end{pmatrix}, \vec{c}=\begin{pmatrix}1 \\ 1 \end{pmatrix}$. Vediamo chiaramente come c sia uguale ad a + b, ma se posizioniamo in un insieme $S=\{\vec{a}, \vec{b}, \vec{c}\}$ allora $\vec{c}=\vec{a}+\vec{b}$, mentre se nell'insieme invertiamo le posizioni di c e b, allora $\vec{b}=\vec{c}-\vec{a}$, ma queste relazioni valgono solo per un sistema in base all'ordine degli elementi.
