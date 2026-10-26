@@ -17,8 +17,9 @@ b_2 - a_2
 $$
 L'angolo fra due vettori è invece pari a:
 $$
-arccos\left(\frac{\vec{u}\cdot\vec{v}}{\rvert\vec{u}\lvert\rvert\vec{v}\lvert}\right)
+arccos\left(\frac{\vec{u}\cdot\vec{v}}{\rvert\rvert\vec{u}\lvert\lvert\cdot\rvert\rvert\vec{v}\lvert\lvert}\right)
 $$
+Dove $\lvert\lvert\vec{v}\rvert\rvert$ rappresenta il normale del vettore, o il teorema di Pitagora dei valori del vettore.
 Due vettori sono perpendicolari fra di loro se la loro moltiplicazione scalare è pari a 0; sono invece paralleli se la loro moltiplicazione scalare è pari alla moltiplicazione delle loro magnitudini
 # Spazi vettoriali
 
