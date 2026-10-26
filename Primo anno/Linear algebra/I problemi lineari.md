@@ -78,30 +78,13 @@ Una matrice quadrata è definita regolare se è la matrice dei coefficienti di u
 
 Avendo definito le matrici, si può definire anche la forma a scala ridotta: essa è un'estensione della precedente forma a scala, ma in aggiunta, la variabile leading è l'unica nella propria colonna diversa da 0 e le righe alla fine sono nulle. Queste due matrici sono quindi in forma a scala ridotta:
 $$
-\begin{array}
-{c@{\qquad\longrightarrow\qquad}l} 
-\begin{bmatrix} 
-1 & 0 & 2 & 3\\
-0 & 1 & -1 & 4\\
-0 & 0 & 0 & 0 
-\end{bmatrix} 
-& 
-\begin{cases} 
-x+2z=3\\ 
-y-z=4\\ 
-0=0 
-\end{cases} \\[1cm] 
-\begin{bmatrix} 
-1 & 0 & 0 & 2 & -1 & 3\\ 
-0 & 1 & 0 & 0 & 4 & -2\\ 
-0 & 0 & 1 & -3 & 0 & 5 
-\end{bmatrix} 
-& 
-\begin{cases} 
-x_1+2x_4-x_5=3\\ 
-x_2+4x_5=-2\\ 
-x_3-3x_4=5 
-\end{cases} 
+\begin{array}{ccl}
+\begin{bmatrix} 1 & 0 & 2 & 3\\ 0 & 1 & -1 & 4\\ 0 & 0 & 0 & 0 \end{bmatrix} 
+& \qquad\longrightarrow\qquad &
+\begin{cases} x+2z=3\\ y-z=4\\ 0=0 \end{cases} 
+\\[1cm] 
+\begin{bmatrix} 1 & 0 & 0 & 2 & -1 & 3\\ 0 & 1 & 0 & 0 & 4 & -2\\ 0 & 0 & 1 & -3 & 0 & 5 \end{bmatrix} & \qquad\longrightarrow\qquad & 
+\begin{cases} x_1+2x_4-x_5=3\\ x_2+4x_5=-2\\ x_3-3x_4=5 \end{cases} 
 \end{array}
 $$
 essenzialmente, per ogni riga, corrisponde una variabile che non si presenta nelle altre righe.
